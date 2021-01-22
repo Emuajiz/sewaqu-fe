@@ -17,11 +17,19 @@ import Chats from "./pages/Chats";
 import Chat from "./pages/Chat";
 import OrderHistory from "./pages/OrderHistory";
 import Order from "./pages/Order";
+import Rent from "./pages/Rent";
+import Category from "./pages/Category";
 
 function WebRoute() {
     return (
         <Router>
             <Switch>
+                <Route path="/category">
+                    <Category />
+                </Route>
+                <Route path="/rent">
+                    <Rent />
+                </Route>
                 <Route path="/order">
                     <Order />
                 </Route>

@@ -7,16 +7,22 @@ const { default: WalletBar } = require("../component/WalletBar");
 
 function Home1() {
 
+    const data = {
+        money: 100000,
+        point: 5000,
+        voucher: 5,
+    }
+
     return (
         <LayoutApp>
             <AdsCarousel />
-            <WalletBar />
+            <WalletBar {...data}/>
             <div className="flex">
-            <p className="ml-4 mt-4 flex-1">kategori</p>
+            <p className="ml-4 mt-4 flex-1">Kamu mau sewa apa nih?</p>
             <p className="mx-4 mt-4">lihat semua</p>
             </div>
             <CategoryCard />
-            <p className="ml-4 mt-4">req?</p>
+            <p className="ml-4 mt-4">Rekomendasi</p>
             <ItemCards />
         </LayoutApp>
         // <div className="bg-sewaqu-gray">

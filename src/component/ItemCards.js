@@ -2,16 +2,38 @@ import ProductOverviewCard from "./ProductOverviewCard"
 
 function ItemCards() {
 
-    const data = [1, 2, 3, 4, 5]
+    const data = [
+        {
+            name: "Mobil Avanza + Driver",
+            location: "Kota bandung",
+            price: 300000,
+            rating: 5,
+            unit: "hari"
+        },
+        {
+            name: "Mobil Avanza + Driver",
+            location: "Kota bandung",
+            price: 300000,
+            rating: 5,
+            unit: "hari"
+        },
+        {
+            name: "Mobil Avanza + Driver",
+            location: "Kota bandung",
+            price: 300000,
+            rating: 5,
+            unit: "hari"
+        },
+    ]
 
     const cards = data.map((val, i) => {
         return (
-            <ProductOverviewCard key={i} val={val} />
+            <ProductOverviewCard key={i} {...val} />
         )
     })
 
-    console.log(data.length) 
-    
+    console.log(data.length)
+
     const adder = () => {
         if (data.length % 2) {
             return (

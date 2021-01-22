@@ -3,7 +3,7 @@ import { useState } from "react"
 import CommonCard from "../component/CommonCard"
 import { numberWithCommas } from "../helper";
 
-function Order() {
+function Rent() {
 
     const [selectedStep, setSelectedStep] = useState(1);
 
@@ -14,7 +14,7 @@ function Order() {
             totalPrice: 100000,
         }
     ]
-    const stepName = ["Belum bayar", "Dikemas", "Dikirimkan", "Diterima", "Dikembalikan", "Selesai", "Dibatalkan"]
+    const stepName = ["Pesanan baru", "Dikemas", "Dikirimkan", "Diterima", "Dikembalikan", "Selesai", "Dibatalkan"]
 
     const handleStepChange = (i) => {
         setSelectedStep(i);
@@ -33,17 +33,17 @@ function Order() {
     const buttonText = () => {
         switch (selectedStep) {
             case 0:
-                return "Bayar"
-            case 1:
-                return "Lihat"
-            case 2:
                 return "Terima"
+            case 1:
+                return "Kirim"
+            case 2:
+                return "Lacak"
             case 3:
-                return "Kembalikan"
-            case 4:
-                return "Selesai"
-            case 5:
                 return "Lihat"
+            case 4:
+                return "Lacak"
+            case 5:
+                return "Selesai"
             case 6:
                 return "Lihat"
             default:
@@ -77,7 +77,7 @@ function Order() {
             <div className="z-20 top-0 bg-sewaqu-yellow nav flex p-4">
                 <div className="h-6 w-6 m-2 bg-white rounded-full"></div>
                 <div className="flex-1 flex items-center text-center text-white text-2xl">
-                    <h2 className="w-full">Penyewaan saya</h2>
+                    <h2 className="w-full">Rental saya</h2>
                 </div>
                 <div className="h-6 w-6 m-2 bg-white rounded-full"></div>
             </div>
@@ -89,4 +89,4 @@ function Order() {
     )
 }
 
-export default Order;
+export default Rent;
