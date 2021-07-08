@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LayoutApp from "../layouts/App";
 
 const { default: AdsCarousel } = require("../component/AdsCarousel");
@@ -16,10 +17,12 @@ function Home1() {
     return (
         <LayoutApp>
             <AdsCarousel />
-            <WalletBar {...data}/>
+            <WalletBar {...data} />
             <div className="flex">
-            <p className="ml-4 mt-4 flex-1">Kamu mau sewa apa nih?</p>
-            <p className="mx-4 mt-4">lihat semua</p>
+                <p className="ml-4 mt-4 flex-1">Kamu mau sewa apa nih?</p>
+                <Link to="/category">
+                    <p className="mx-4 mt-4">lihat semua</p>
+                </Link>
             </div>
             <CategoryCard />
             <p className="ml-4 mt-4">Rekomendasi</p>

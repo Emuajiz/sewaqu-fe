@@ -19,11 +19,83 @@ import OrderHistory from "./pages/OrderHistory";
 import Order from "./pages/Order";
 import Rent from "./pages/Rent";
 import Category from "./pages/Category";
+import Payment from "./pages/Payment";
+import PaymentBankMethod from "./pages/PaymentBankMethod";
+import PaymentAddress from "./pages/PaymentAddress";
+import PaymentConfirm from "./pages/PaymentConfirm";
+import OrderCancel from "./pages/OrderCancel";
+import RentReputation from "./pages/RentReputation";
+import OrderDetail from "./pages/OrderDetail";
+import WalletHistory from "./pages/WalletHistory";
+import Setting from "./pages/Setting";
+import ProductAdd from "./pages/ProductAdd";
+import Help from "./pages/Help";
+import AboutUs from "./pages/AboutUs";
+import Feedback from "./pages/Feedback";
+import Notification from "./pages/Notification";
+import Wallet from "./pages/Wallet";
+import WalletWithdraw from "./pages/WalletWithdraw";
+import WalletWithdrawDetail from "./pages/WalletWithdrawDetail";
+import OrderSolution from "./pages/OrderSolution";
 
 function WebRoute() {
     return (
         <Router>
             <Switch>
+                <Route path="/order/solution">
+                    <OrderSolution />
+                </Route>
+                <Route path="/wallet/withdraw/detail">
+                    <WalletWithdrawDetail />
+                </Route>
+                <Route path="/wallet/withdraw">
+                    <WalletWithdraw />
+                </Route>
+                <Route path="/wallet">
+                    <Wallet />
+                </Route>
+                <Route path="/notification">
+                    <Notification />
+                </Route>
+                <Route path="/feedback">
+                    <Feedback />
+                </Route>
+                <Route path="/about">
+                    <AboutUs />
+                </Route>
+                <Route path="/help">
+                    <Help />
+                </Route>
+                <Route path="/product/add">
+                    <ProductAdd />
+                </Route>
+                <Route path="/setting">
+                    <Setting />
+                </Route>
+                <Route path="/wallet/history">
+                    <WalletHistory />
+                </Route>
+                <Route path="/order/detail">
+                    <OrderDetail />
+                </Route>
+                <Route path="/rent/reputation">
+                    <RentReputation />
+                </Route>
+                <Route path="/order/cancel">
+                    <OrderCancel />
+                </Route>
+                <Route path="/payment/confirm">
+                    <PaymentConfirm />
+                </Route>
+                <Route path="/payment/address">
+                    <PaymentAddress />
+                </Route>
+                <Route path="/payment/bank">
+                    <PaymentBankMethod />
+                </Route>
+                <Route path="/payment">
+                    <Payment />
+                </Route>
                 <Route path="/category">
                     <Category />
                 </Route>
